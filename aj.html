@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<style>
+  body{
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  .btn1{
+    width:150px;
+    text-align:center;
+    background-color: rgb(36, 169, 36);
+    color:white;
+    border-color:rgb(36, 169, 36);
+    border-radius:10px;
+  }
+  .btn1:hover{
+    background-color:rgb(151, 254, 151);
+    transition:0.8s;
+  }
+  .btn2{
+    width:150px;
+    text-align:center;
+    background-color: rgb(36, 169, 36);
+    color:white;
+    border-color:rgb(36, 169, 36);
+    border-radius:10px;
+  }
+  .btn2:hover{
+    background-color:rgb(151, 254, 151);
+    transition:0.8s;
+  }
+  .countdown{
+    display:flex;
+    justify-content:space-between;
+    margin-right:10px;
+    margin-left:10px;    
+}
+.day, .hour, .minute, .second{
+    font-size: 15px;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+}
+.h31{
+    font-size: 15px;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+}
+ /* Slideshow container */
+ .slideshow-container {
+  position: relative;
+  background: white;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+.floating {
+ position: fixed;
+ width: 60px;
+ height: 60px;
+ bottom: 40px;
+ right: 40px;
+ background-color: #25d366;
+ color: #fff;
+ border-radius: 50px;
+ text-align: center;
+ font-size: 30px;
+ box-shadow: 2px 2px 3px #999;
+ z-index: 100;
+}
+
+.fab-icon {
+ margin-top: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+#blog{
+       display:flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       padding:40px; 
+}
+    .blog-heading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .blog-heading span{
+        color:#f33c3c;
+    }
+    .blog-heading h3{
+        font-size:2.4rem;
+        color:#2b2b2b;
+        font-weight: 600;
+    }
+    .blog-container{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin:20px opx;
+        flex-wrap:wrap;
+    }
+    .blog-box{
+        width:350px;
+        background-color: #ffff;
+        border:1px solid #ececec;
+        margin:20px;
+    }
+    .blog-img{
+        width:100%;
+        height:auto;
+    }
+    .blog-img img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position: center;
+    }
+    .blog-text{
+        padding:30px;
+        display:flex;
+        flex-direction: column;
+    }
+    .blog-text span{
+        color:#f33c3c;
+        font-size: 0.9rem;
+    }
+    .blog-text .blog-title{
+        font-size: 1.3rem;
+        font-weight: 500;
+        color:#272727;
+        text-decoration: none;
+    }
+    .blog-text .blog-title:hover{
+        color:#f33c3c;
+        transition:all ease 0.3s;
+    }
+    .blog-text .update{
+        color:#9b9b9b;
+        font-size: 0.9rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        margin:20px 0px;
+    }
+    .blog-text .read{
+        color:white;
+        background-image: url("tinubu18.jpeg");
+        width:100px;
+        text-align: center;
+        border-top-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        text-decoration: none;
+    }
+    .blog-text .read:hover{
+        color:#f33c3c;
+        transition:all ease 0.3s;
+    }
+    @media(max-width:1250px){
+        .blog-box{
+            width:300px;
+        }
+    }
+    @media(max-width:1100px){
+      .blog-box{
+            width:70%;
+        }
+    }
+    @media(max-width:550px){
+      .blog-box{
+        margin:20px 10px;
+            width:100%;
+        }
+        #blog{
+          padding:20px;
+        }
+    }
+</style>
+<body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#"><img src="tlogo.jpeg" class="rounded-circle" height="50" width="50"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+       <li class="nav-item">
+         <a class="nav-link text-light" href="aj.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="ajabout.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="ajmember.html">Member</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link text-light" href="ajdonate.html">Donate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="ajcontact.html">Contact</a>
+        </li>     
+      </ul>
+    </div>  
+  </nav>
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+      <li data-target="#demo" data-slide-to="3"></li>
+      <li data-target="#demo" data-slide-to="4"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="unveil.jpeg" alt="Los Angeles" width="1100" height="500">
+        <div class="carousel-caption">
+          <h3 style="background: rgba(0, 0, 0, 0.5);font-family: Arial, Helvetica, sans-serif;">WELCOME TO COALITION OF MIDDLE BELT YOUTH SUPPORT FOR TINUBU HOME</h3>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="tinubu11.jpeg" alt="Los Angeles" width="1100" height="500">
+        <div class="carousel-caption">
+          <h3 style="background: rgba(0, 0, 0, 0.5);font-family: Arial, Helvetica, sans-serif;"></h3>
+          <p style="background: rgba(0, 0, 0, 0.5);">Tinubu picks former Borno gov, Shettima as running mate.</p>
+          <a href="https://www.vanguardngr.com/2022/07/breaking-shettima-confirmed-as-tinubus-running-mate/"><button class="btn1">Read More</button></a>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="tinubu7.jpeg" alt="Chicago" width="1100" height="500">
+        <div class="carousel-caption">
+          <h3 style="background: rgba(0, 0, 0, 0.5);font-family: Arial, Helvetica, sans-serif;"></h3>
+          <p style="background: rgba(0, 0, 0, 0.5);">‘I will be fair to all’, Tinubu speaks on Muslim-Muslim ticket.</p>
+          <a href="https://www.vanguardngr.com/2022/07/i-will-be-fair-to-all-tinubu-speaks-on-muslim-muslim-ticket/"><button class="btn1">Read More</button></a>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="tinubu17.jpeg" alt="New York" width="1100" height="500">
+        <div class="carousel-caption">
+          <h3 style="background: rgba(0, 0, 0, 0.5); font-family: Arial, Helvetica, sans-serif;"></h3>
+          <p  style="background: rgba(0, 0, 0, 0.5);">‘Follow man wey know road’ – Shettima tells Nigerians at 2022 NBA conference.</p>
+          <a href="https://www.vanguardngr.com/2022/08/follow-man-wey-know-road-shettima-tells-nigerians-at-2022-nba-conference/"><button class="btn1">Read More</button></a>  
+        </div>   
+        </div>
+      <div class="carousel-item">
+        <img src="tinubu26.jpeg" alt="New York" width="1100" height="500">
+        <div class="carousel-caption">
+          <h3 style="background: rgba(0, 0, 0, 0.5);font-family: Arial, Helvetica, sans-serif;"></h3>
+          <p style="background: rgba(0, 0, 0, 0.5);">Tinubu appoints Yahaya Bello as his campaign council youth co-ordinator.</p>
+          <a href="https://www.premiumtimesng.com/news/top-news/554740-tinubu-appoints-yahaya-bello-as-his-campaign-council-youth-co-ordinator.html"><button class="btn1">Read More</button></a> 
+        </div>   
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+       <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </div>  
+  <div class="container" style="margin-top:10px;">
+    <div class="row">
+      <div class="col-lg-6">
+        <i class="fa fa-info-circle" aria-hidden="true"></i> 
+        <h6 data-aos="fade" data-aos-duration="1100" style="text-align:left; color:rgb(169, 24, 24); font-family:Arial, Helvetica, sans-serif">About</h6>
+        <p data-aos="fade" data-aos-duration="1200" style="text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size:12px;">Coalition of Middle Belt Youth Support for Tinubu and Shettima is a political movement established to ensure that the APC Presidential candidate emerge winner in the General election. The movemnet covered the eight states in the region which are Kaduna, Kogi, Kwara, Plateau, Niger, Nassarawa, Benue and F.C.T Abuja.</p>
+      <hr>
+      </div>
+      <div class="col-lg-6">
+        <i class="fa fa-bullseye" aria-hidden="true"></i>
+        <h6 data-aos="fade" data-aos-duration="1100" style="text-align:left; color:rgb(169, 24, 24); font-family:Arial, Helvetica, sans-serif"></i>Mission</h6> 
+        <p data-aos="fade" data-aos-duration="1200" style="text-align:justify; font-size:12px;font-family:Arial, Helvetica, sans-serif;">Our Mission Is To Ensure 100 Percent Winning For The APC Aspirant In All The Middle Belt States And Project The Values, Ideas, 
+          Leadership Skills And Personality Of Bola Ahmed Tinubu As The Most Efficient Leader Nigerians Need To Drive The Country From A Third To A First World Nation.</p>
+      <hr>
+      </div>
+    </div>
+  </div> 
+
+  <div class="container" style="margin-top:10px;">
+    <div class="row">
+      <div class="col-lg-6">
+        <i class="fa fa-eye" aria-hidden="true"></i> 
+        <h6 data-aos="fade" data-aos-duration="1100" style="text-align:left; color:rgb(169, 24, 24); font-family:Arial, Helvetica, sans-serif">Vision</h6>
+        <p data-aos="fade" data-aos-duration="1200" style="text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size:12px;">The Coalition Of Middle Belt Youth's Support For Tinubu Shettima 2023 (COMBYS4TS) Will 
+          Strive To Sensitize The Teeming Middle Belt Youth's On The Need For Full Participation In 2023 General Elections And Total Support For Tinubu Shettima And All APC Aspirant Across All The Nine (9) Middle Belt States Towards Ensuring The Emergence Of A True 
+          Democrat, His Excellency Sen. Bola Ahmed Come 2023.</p>
+          <hr>
+      </div>
+      <div class="col-lg-6">
+        <i class="fa fa-tasks" aria-hidden="true"></i>
+        <h6 data-aos="fade" data-aos-duration="1100" style="text-align:left; color:rgb(169, 24, 24); font-family:Arial, Helvetica, sans-serif"></i>Aim and Objectives</h6> 
+        <p data-aos="fade" data-aos-duration="1200" style="text-align:justify; font-size:12px;font-family:Arial, Helvetica, sans-serif;">Our Aims And Objectives Is To Mobilize The Grassroot And Establish Community Support Group By Encouraging The Youth's To Come Out In Mass In All Election Days, Cast Their Votes And Protect Their Votes Without Violence Across The Middle Belt States And To Also Take Over The Social Media Space For Sensitization Of The Teeming Middle Belt Youth's Towards Ensuring They Obtain Their PVC And Vote For All APC Aspirant In The 2023 General Elections.</p>
+      <hr>
+      </div>
+    </div>
+  </div> 
+  <div class="container-fluid">
+    <div class="container" style="background-image:url('background4.jpg'); text-align:center;">
+      <h3 style="color:white;">Latest Update</h3>
+    </div>
+  </div>
+  <section class="container1" style="display:flex; align-items: center;flex-direction:column;background-color: white;width:100%; height:50px; margin-bottom: 50px;">
+    <div>
+      <p data-aos="fade" data-aos-duration="1100" style="text-align:center; font-family:Arial, Helvetica, sans-serif; color:rgb(50, 50, 111);">2023 GENERAL ELECTION COUNTDOWN</p>
+      <div class="countdown">
+        <div class="container-day">
+          <h3 class="day">Time</h3>
+          <h3 class="h31">Day</h3>
+        </div>
+        <div class="container-hour">
+          <h3 class="hour">Time</h3>
+          <h3 class="h31">Hour</h3>
+        </div>
+        <div class="container-minute">
+          <h3 class="minute">Time</h3>
+          <h3 class="h31">Minute</h3>
+        </div>
+        <div class="container-second">
+          <h3 class="second">Time</h3>
+          <h3 class="h31">Second</h3>
+        </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="blog-heading">
+        <span></span>
+        <h3 data-aos="fade" data-aos-duration="1100">Blog Section</h3>
+    </div>
+    <div class="blog-container">
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="unveil.jpeg" alt="blog">
+            </div>
+            <div class="blog-text">
+                <span>20 Oct 2022 / Sat</span>
+                <a href="" class="blog-title">Unveiling and Inauguration of Coalition of Middle-Belt Youth Support 4 Tinubu and Shettima</a>
+                <p class="update">Today is the Unveiling and Inauguration of this movement. The invited guest are H.E Bello Yahaya, the executive Governor of Kogi State and Grand Patron of this movement...</p>
+                <a href="" class="read">Read More</a>
+            </div>
+        </div>
+
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="tinubu26.jpeg" alt="blog">
+            </div>
+            <div class="blog-text">
+                <span>18 Sept 2022 / Sun</span>
+                <a href="" class="blog-title">Tinubu appoints Yahaya Bello as his campaign council youth co-ordinator.</a>
+                <p class="update">Tinubu says Bello deserves the appointment owing to his impressive political achievements and the exemplary leadership he had demonstrated as governor of his state and as a party member...</p>
+                <a href="https://www.premiumtimesng.com/news/top-news/554740-tinubu-appoints-yahaya-bello-as-his-campaign-council-youth-co-ordinator.html" class="read">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="fluid-container">
+  <div class="container" style="background-image:url('background4.jpg');">
+    <h3 data-aos="fade" data-aos-duration="1100" style="color:white; height:70px; padding-top:25px; text-align:center;">Donate</h3>
+  </div>
+  <div class="container">
+      <p style="text-align:justify;">You can donate to this movement by making a bank transfer to the bank account below. Simply enter the bank name and account number, then confirm the bank account name and transfer. To confirm your donation, put a call to +2348067668357 or +2347064923332.</p>
+    </div>
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="name"><h5 style="color:rgb(110, 10, 10)">Bank:</h5><img src="union.png" width="30px" height="20px">Union Bank</p>
+        <p class="name"><h5 style="color:rgb(110, 10, 10)">Account Name:</h5> Coalition of Middle Belt Youth Forum</p>
+        <p class="name"><h5 style="color:rgb(110, 10, 10)">Account Number:</h5>0183105300</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container-fluid">
+    <div class="container" style="background-image:url('background4.jpg'); height:100px;align-content: center;">
+      <h5 style="color:white; text-align:center; padding-top:20px;">Follow Us</h5>
+      <p style="text-align:center"><a style="color:#3b5998; margin-left:10px;" href="https://www.facebook.com/groups/838046363850240/?ref=share"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+        <a style="color:#00acee; margin-left:15px;" href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+        <a style="color:#C13584; margin-left:15px;" href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a><br>
+      </p>
+    </div>
+  </div>
+
+  <div class="slideshow-container">
+    <h4 style="text-align:center; margin-top:30px;">Testimonial</h4>
+    <div class="mySlides">
+      <img src="tinubu31.jpeg" style="height:100px; width:100px; border-radius:50px;"><br><br>
+      <q>On H.E Bola Ahamed Tinubu Mandate i shall stand.</q><br>
+      <p class="author">- Hon. Ishaya A. Ranga</p>
+    </div>
+    
+    <div class="mySlides">
+      <img src="tinubu32.jpeg" style="height:100px; width:100px; border-radius:50px;"><br><br>
+      <q>On your mandate i shall always stand Bola. Continue to build human sir.</q><br>
+      <p class="author">- Inioluwa Ayelabola</p>
+    </div>
+    
+    <div class="mySlides">
+      <img src="tlogo.jpeg" style="height:100px; width:100px; border-radius:50px;"><br><br>
+      <q>On your mandate i shall always stand Bola. Continue to build human sir.</q><br>
+      <p class="author">- Hon. Olajide Favour</p>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    <div class="container-fluid" style="background-color:rgb(29, 27, 27); margin-top:20px; height:auto;">
+      <div class="container" style="display:flex;">
+        <a class="navbar-brand" href="#"><img src="tlogo.jpeg" class="rounded-circle mt-2" height="50" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="apc.png" class="rounded-circle mt-2" height="50" width="50"></a>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <h6 style="color:white; margin-top:15px; text-decoration: underline;">Quick Links</h6>
+          <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:20px; margin-bottom:5px;" href="aj.html">Home</a><br>
+         <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:20px; margin-bottom:5px;" href="ajabout.html">About</a><br>
+        <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:20px; margin-bottom:5px;" href="ajmember.html">Member</a><br>
+        <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:20px; margin-bottom:5px;" href="ajabout.html">Donate</a><br>
+       <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:20px; margin-bottom:5px;" href="ajcontact.html">Contact</a><br>
+        </div>
+        <div class="col-lg-3">
+          <h6 style="color:white; margin-top:15px; text-decoration: underline;">Zone</h6>
+          <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">F.C.T</a><br>
+          <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Benue</a><br>
+         <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Kaduna</a><br>
+        <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Kogi</a><br>
+       <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Kwara</a><br>
+       <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Nassarawa</a><br>
+       <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Niger</a><br>
+       <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Plateau</a><br>
+       <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Taraba</a>
+        </div>
+        <div class="col-lg-3">
+          <h6 style="color:white; margin-top:15px; text-decoration:underline;">Follow Us</h6>
+          <a style="color:#3b5998; margin-left:0px;" href="https://www.facebook.com/groups/838046363850240/?ref=share"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+          <a style="color:#00acee; margin-left:15px;" href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+          <a style="color:#C13584; margin-left:15px;" href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a><br>
+        </div>
+        <div class="col-lg-3">
+          <h6 style="color:white; margin-top:15px; text-decoration:underline;">Contact</h6>
+          <p style="color:white; font-family:san-serif; margin-top:0;">National Co-ordinator <i class="fa fa-phone" aria-hidden="true"> +2348067668357</i></p>             
+        </div>
+        <i style="color:white; margin-left:15px;" class="fa fa-envelope" aria-hidden="true"> coalitionofmiddlebeltyouth@gmail.com</i><br>
+      </div>
+      <i style="color:white;" class="fa fa-map-marker" aria-hidden="true"> 14th Road, Block 2018 Anan House First Avenue, Gwarinpa, F.C.T Abuja.</i>
+      <br><br>
+      <p style="color:white; font-family:san-serif; text-align:center;">coalitionofmiddlebeltyouth Copyright &copy;2022 All Rights Researved. </p>
+      <p style="color:white; font-family:san-serif; text-align:center;">Powered by: DakieoDev <i class="fa fa-phone" aria-hidden="true"> +2348107265575.</i></p><br>
+    </div>
+  <a href="https://wa.me/2347064923332?text=Hi%20Qiscus" class="floating" target="_blank">
+    <i class="fab fa-whatsapp fab-icon"></i>
+    </a>
+</body>
+<script src="aj.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</html>

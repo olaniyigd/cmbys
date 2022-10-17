@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <title>Tinubu</title>
+</head>
+<style>
+.container-fluid{
+    background-color: whitesmoke;
+    font-family: monospace;
+}
+.responsive{
+    width:50px;
+    height:50px;
+    border-radius:25px;
+}
+.grid-container {
+  display: grid;
+  gap: 5px;
+  background-color: whitesmoke;
+  padding: 10px;
+}
+a{
+        color:#e03a3e;
+    }
+    a:hover{
+        color:#e76668;
+        text-decoration: none;
+    }
+    .team .member{
+        margin-bottom:20px;
+        overflow:hidden;
+        border-radius:5px;
+        background:#fff;
+    }
+    .team .member .member-img{
+        position:relative;
+        overflow:hidden;
+    }
+    .team .member .social{
+        position:absolute;
+        left:0;
+        bottom:30px;
+        right:0;
+        opacity:0;
+        transition:ease-in-out 0.3s;
+        text-align:center;
+    }
+    .team .member:hover .social{
+        opacity:1;
+        bottom:15px;
+    }
+    .team .member .social a{
+        transition:color o.3s;
+        color:#111111;
+        margin:0 3px;
+        padding-top:7px;
+        border-radius:50px;
+        width:36px;
+        height:36px;
+        background:#e03a3c;
+        display:inline-block;
+        transition:ease-in-out 0.3s;
+        color:#fff;
+    }
+    .team .member .social a:hover{
+        background:#111111;
+    }
+    .team .member .social i{
+        font-size:18px;
+    }
+    .team .member .member-info{
+        padding:25px 15px; 
+    }
+    .team .member .member-info h4{
+        font-weight: 700;
+        margin-bottom:5px;
+        font-size:18px;
+        color:#111111;
+    }
+    .team .member .member-info span{
+        display:block;
+        font-size: 13px;
+        font-weight: 400;
+        color:#aaaa;
+    }
+    section{
+        padding:60px 0;
+        overflow:hidden;
+        position:relative;
+    }
+    .section-title{
+        text-align:center;
+        padding-bottom:30px;
+        position:relative;
+    }
+h5{
+  color:rgb(168, 12, 12);
+  font-family: monospace;
+  font-weight: bolder;
+}
+.info{
+  max-width: 100%;
+  font-family:monospace;
+}
+h2{
+  font-family:monospace;
+  background-color:rgb(168, 12, 12);;
+  color:white;
+  text-align:center;
+}
+.fluid-container{
+  background-color: white;
+  margin-top:0;
+}
+
+.container1{
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+    background-color: white;
+    width:100%;
+    height:50px;
+}
+.note{
+  color: black;
+  text-align: justify;
+  margin-left:15px;
+  margin-right:15px;
+}
+.gtb{
+  border-color: black;
+}
+.fluid-container1{
+  background-color:rgb(168, 12, 12);
+}
+h6{
+  color:white;
+  margin-top:20px;
+  margin-left:20px;
+  margin-bottom: 10px;
+  font-family: monospace;
+}
+.logo{
+  margin-top:20px;
+  margin-left:20px;
+  border-radius:50px;
+}
+.link{
+  color:white;
+  margin-left:10px;
+  text-decoration: none;
+  font-family: monospace;
+}
+.social{
+  color:white;
+  text-align: center;
+  font-family: monospace;
+  padding-top: 20px;
+}
+.container9{
+  display:inline;
+}
+.fa{
+  color: white;
+  margin-left:10px;
+}
+.copy{
+  margin-top:10px;
+  color:white;
+  text-align:center;
+}
+.copy1{
+  color:white;
+  text-align:center;
+}
+</style>
+<body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <img src="tlogo.jpeg" class="responsive">
+                <a class="navbar-brand fw-bold" href=""></a>
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                  <span class="navbar-toggler-icon text-light bg-light"></span>
+                </button>
+              <div class="collapse navbar-collapse" id="mynavbar">
+                  <ul class="navbar-nav me-auto">
+                       <li class="nav-item">
+                         <a class="nav-link text-dark" href="tinubu.html">Home</a>
+                       </li>
+                       <li class="nav-item">
+                         <a class="nav-link text-dark" href="tinubu3.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link text-dark" href="tinubu2.html">Executive</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link text-dark" href="">Update</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" href="tinubu4.html">Donate</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" href="">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+   </div>
+   <section id="team" class="team section-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>National Executives</h2>
+        </div>
+        <div class="row">
+           <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                <div class="member" data-aos="fade-up" data-aos-delay="100">
+                   <div class="member-img">
+                      <img src="tinubu30.jpeg" class="img-fluid" alt="">
+                      <div class="social">
+                         <a href="" class="iconfont-twitter"></a>
+                         <a href="" class="iconfont-facebook"></a>
+                         <a href="" class="iconfont-linkedin"></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>His Excellency Yahaya Bello</h4>
+                        <span>Executive Governor of Kogi State</span>
+                        <span>Grand Patron</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                <div class="member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-img">
+                        <img src="tlogo.jpeg" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href="" class="iconfont-twitter"></a>
+                            <a href="" class="iconfont-facebook"></a>
+                            <a href="" class="iconfont-linkedin"></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>Her Excellency Dame Paulline Kedem Tallen </h4>
+                        <span>Minister for Women & Social Developement</span>
+                        <span>Grand Matron</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+               <div class="member" data-aos="fade-up" data-aos-delay="100">
+                  <div class="member-img">
+                     <img src="tlogo.jpeg" class="img-fluid" alt="">
+                     <div class="social">
+                        <a href="" class="iconfont-twitter"></a>
+                        <a href="" class="iconfont-facebook"></a>
+                        <a href="" class="iconfont-linkedin"></a>
+                       </div>
+                   </div>
+                   <div class="member-info">
+                       <h4>His Excellency Dayo Isreal</h4>
+                       <span>APC National Youth Leader</span>
+                   </div>
+               </div>
+           </div>
+           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+               <div class="member" data-aos="fade-up" data-aos-delay="100">
+                   <div class="member-img">
+                       <img src="tinubu33.jpeg" class="img-fluid" alt="">
+                       <div class="social">
+                           <a href="" class="iconfont-twitter"></a>
+                           <a href="" class="iconfont-facebook"></a>
+                           <a href="" class="iconfont-linkedin"></a>
+                       </div>
+                   </div>
+                   <div class="member-info">
+                       <h4>Hon. Ishaya Ayuba Ranga</h4>
+                       <span>National Coordinator</span>
+                       <span>Kaduna State</span>
+                   </div>
+               </div>
+           </div>
+           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+             <div class="member" data-aos="fade-up" data-aos-delay="100">
+                 <div class="member-img">
+                     <img src="tlogo.jpeg" class="img-fluid" alt="">
+                     <div class="social">
+                         <a href="" class="iconfont-twitter"></a>
+                         <a href="" class="iconfont-facebook"></a>
+                         <a href="" class="iconfont-linkedin"></a>
+                     </div>
+                 </div>
+                 <div class="member-info">
+                     <h4>Hon. Olajide Favour</h4>
+                     <span>Deputy National Coordinator</span>
+                     <span>Kogi State</span>
+                 </div>
+             </div>
+         </div>
+       </div>
+       <div class="row">
+        <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+             <div class="member" data-aos="fade-up" data-aos-delay="100">
+                <div class="member-img">
+                   <img src="tlogo.jpeg" class="img-fluid" alt="">
+                   <div class="social">
+                      <a href="" class="iconfont-twitter"></a>
+                      <a href="" class="iconfont-facebook"></a>
+                      <a href="" class="iconfont-linkedin"></a>
+                     </div>
+                 </div>
+                 <div class="member-info">
+                     <h4>Sadiq Mahammed Mnioe</h4>
+                     <span>National Secretary</span>
+                     <span>Nasarrwawa State</span>
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+             <div class="member" data-aos="fade-up" data-aos-delay="100">
+                 <div class="member-img">
+                     <img src="tlogo.jpeg" class="img-fluid" alt="">
+                     <div class="social">
+                         <a href="" class="iconfont-twitter"></a>
+                         <a href="" class="iconfont-facebook"></a>
+                         <a href="" class="iconfont-linkedin"></a>
+                     </div>
+                 </div>
+                 <div class="member-info">
+                     <h4>Comr. Abdulazeez Sadika</h4>
+                     <span>Director Media & Publicity</span>
+                     <span>Niger State</span>
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+           <div class="member" data-aos="fade-up" data-aos-delay="100">
+               <div class="member-img">
+                   <img src="tlogo.jpeg" class="img-fluid" alt="">
+                   <div class="social">
+                       <a href="" class="iconfont-twitter"></a>
+                       <a href="" class="iconfont-facebook"></a>
+                       <a href="" class="iconfont-linkedin"></a>
+                   </div>
+               </div>
+               <div class="member-info">
+                   <h4>Hon. Ayodeji Yusuf Amasa</h4>
+                   <span>Director Programs</span>
+                   <span>Kwara State</span>
+               </div>
+           </div>
+       </div>
+       <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+           <div class="member-img">
+              <img src="tlogo.jpeg" class="img-fluid" alt="">
+              <div class="social">
+                 <a href="" class="iconfont-twitter"></a>
+                 <a href="" class="iconfont-facebook"></a>
+                 <a href="" class="iconfont-linkedin"></a>
+                </div>
+            </div>
+            <div class="member-info">
+                <h4>Sadiq Mahammed Mnioe</h4>
+                <span>National Secretary</span>
+                <span>Nasarrwawa State</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-img">
+                <img src="tlogo.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                    <a href="" class="iconfont-twitter"></a>
+                    <a href="" class="iconfont-facebook"></a>
+                    <a href="" class="iconfont-linkedin"></a>
+                </div>
+            </div>
+            <div class="member-info">
+                <h4>Comr. Abdulazeez Sadika</h4>
+                <span>Director Media & Publicity</span>
+                <span>Niger State</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+      <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <div class="member-img">
+              <img src="tlogo.jpeg" class="img-fluid" alt="">
+              <div class="social">
+                  <a href="" class="iconfont-twitter"></a>
+                  <a href="" class="iconfont-facebook"></a>
+                  <a href="" class="iconfont-linkedin"></a>
+              </div>
+          </div>
+          <div class="member-info">
+              <h4>Hon. Ayodeji Yusuf Amasa</h4>
+              <span>Director Programs</span>
+              <span>Kwara State</span>
+          </div>
+      </div>
+  </div>
+     </div>
+     <div class="row">
+      <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+           <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                 <img src="tlogo.jpeg" class="img-fluid" alt="">
+                 <div class="social">
+                    <a href="" class="iconfont-twitter"></a>
+                    <a href="" class="iconfont-facebook"></a>
+                    <a href="" class="iconfont-linkedin"></a>
+                   </div>
+               </div>
+               <div class="member-info">
+                   <h4>Sadiq Mahammed Mnioe</h4>
+                   <span>National Secretary</span>
+                   <span>Nasarrwawa State</span>
+               </div>
+           </div>
+       </div>
+       <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+           <div class="member" data-aos="fade-up" data-aos-delay="100">
+               <div class="member-img">
+                   <img src="tlogo.jpeg" class="img-fluid" alt="">
+                   <div class="social">
+                       <a href="" class="iconfont-twitter"></a>
+                       <a href="" class="iconfont-facebook"></a>
+                       <a href="" class="iconfont-linkedin"></a>
+                   </div>
+               </div>
+               <div class="member-info">
+                   <h4>Comr. Abdulazeez Sadika</h4>
+                   <span>Director Media & Publicity</span>
+                   <span>Niger State</span>
+               </div>
+           </div>
+       </div>
+       <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+         <div class="member" data-aos="fade-up" data-aos-delay="100">
+             <div class="member-img">
+                 <img src="tlogo.jpeg" class="img-fluid" alt="">
+                 <div class="social">
+                     <a href="" class="iconfont-twitter"></a>
+                     <a href="" class="iconfont-facebook"></a>
+                     <a href="" class="iconfont-linkedin"></a>
+                 </div>
+             </div>
+             <div class="member-info">
+                 <h4>Hon. Ayodeji Yusuf Amasa</h4>
+                 <span>Director Programs</span>
+                 <span>Kwara State</span>
+             </div>
+         </div>
+     </div>
+     <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+      <div class="member" data-aos="fade-up" data-aos-delay="100">
+         <div class="member-img">
+            <img src="tlogo.jpeg" class="img-fluid" alt="">
+            <div class="social">
+               <a href="" class="iconfont-twitter"></a>
+               <a href="" class="iconfont-facebook"></a>
+               <a href="" class="iconfont-linkedin"></a>
+              </div>
+          </div>
+          <div class="member-info">
+              <h4>Sadiq Mahammed Mnioe</h4>
+              <span>National Secretary</span>
+              <span>Nasarrwawa State</span>
+          </div>
+      </div>
+  </div>
+  <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+      <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <div class="member-img">
+              <img src="tlogo.jpeg" class="img-fluid" alt="">
+              <div class="social">
+                  <a href="" class="iconfont-twitter"></a>
+                  <a href="" class="iconfont-facebook"></a>
+                  <a href="" class="iconfont-linkedin"></a>
+              </div>
+          </div>
+          <div class="member-info">
+              <h4>Comr. Abdulazeez Sadika</h4>
+              <span>Director Media & Publicity</span>
+              <span>Niger State</span>
+          </div>
+      </div>
+  </div>
+  <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+    <div class="member" data-aos="fade-up" data-aos-delay="100">
+        <div class="member-img">
+            <img src="tlogo.jpeg" class="img-fluid" alt="">
+            <div class="social">
+                <a href="" class="iconfont-twitter"></a>
+                <a href="" class="iconfont-facebook"></a>
+                <a href="" class="iconfont-linkedin"></a>
+            </div>
+        </div>
+        <div class="member-info">
+            <h4>Hon. Ayodeji Yusuf Amasa</h4>
+            <span>Director Programs</span>
+            <span>Kwara State</span>
+        </div>
+    </div>
+</div>
+   </div>
+   <div class="row">
+    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+         <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-img">
+               <img src="tlogo.jpeg" class="img-fluid" alt="">
+               <div class="social">
+                  <a href="" class="iconfont-twitter"></a>
+                  <a href="" class="iconfont-facebook"></a>
+                  <a href="" class="iconfont-linkedin"></a>
+                 </div>
+             </div>
+             <div class="member-info">
+                 <h4>Sadiq Mahammed Mnioe</h4>
+                 <span>National Secretary</span>
+                 <span>Nasarrwawa State</span>
+             </div>
+         </div>
+     </div>
+     <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+         <div class="member" data-aos="fade-up" data-aos-delay="100">
+             <div class="member-img">
+                 <img src="tlogo.jpeg" class="img-fluid" alt="">
+                 <div class="social">
+                     <a href="" class="iconfont-twitter"></a>
+                     <a href="" class="iconfont-facebook"></a>
+                     <a href="" class="iconfont-linkedin"></a>
+                 </div>
+             </div>
+             <div class="member-info">
+                 <h4>Comr. Abdulazeez Sadika</h4>
+                 <span>Director Media & Publicity</span>
+                 <span>Niger State</span>
+             </div>
+         </div>
+     </div>
+     <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+       <div class="member" data-aos="fade-up" data-aos-delay="100">
+           <div class="member-img">
+               <img src="tlogo.jpeg" class="img-fluid" alt="">
+               <div class="social">
+                   <a href="" class="iconfont-twitter"></a>
+                   <a href="" class="iconfont-facebook"></a>
+                   <a href="" class="iconfont-linkedin"></a>
+               </div>
+           </div>
+           <div class="member-info">
+               <h4>Hon. Ayodeji Yusuf Amasa</h4>
+               <span>Director Programs</span>
+               <span>Kwara State</span>
+           </div>
+       </div>
+   </div>
+   <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+    <div class="member" data-aos="fade-up" data-aos-delay="100">
+       <div class="member-img">
+          <img src="tlogo.jpeg" class="img-fluid" alt="">
+          <div class="social">
+             <a href="" class="iconfont-twitter"></a>
+             <a href="" class="iconfont-facebook"></a>
+             <a href="" class="iconfont-linkedin"></a>
+            </div>
+        </div>
+        <div class="member-info">
+            <h4>Sadiq Mahammed Mnioe</h4>
+            <span>National Secretary</span>
+            <span>Nasarrwawa State</span>
+        </div>
+    </div>
+</div>
+ </div>
+    </div>
+</section>
+
+    <section id="team" class="team section-bg">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>STATE COORDINATORS</h2>
+            </div>
+            <div class="row">
+               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member" data-aos="fade-up" data-aos-delay="100">
+                       <div class="member-img">
+                          <img src="tinubu32.jpeg" class="img-fluid" alt="">
+                          <div class="social">
+                             <a href="" class="iconfont-twitter"></a>
+                             <a href="" class="iconfont-facebook"></a>
+                             <a href="" class="iconfont-linkedin"></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Comr. Inioluwa Elizabeth Ayelabola</h4>
+                            <span>Kwara State Coordinator</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-img">
+                            <img src="tlogo.jpeg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="" class="iconfont-twitter"></a>
+                                <a href="" class="iconfont-facebook"></a>
+                                <a href="" class="iconfont-linkedin"></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Comr. </h4>
+                            <span> State Coordinator</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                   <div class="member" data-aos="fade-up" data-aos-delay="100">
+                       <div class="member-img">
+                            <img src="tlogo.jpeg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="" class="iconfont-twitter"></a>
+                                <a href="" class="iconfont-facebook"></a>
+                                <a href="" class="iconfont-linkedin"></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Comr. </h4>
+                            <span> State Coordinator</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                  <div class="member" data-aos="fade-up" data-aos-delay="100">
+                      <div class="member-img">
+                           <img src="tlogo.jpeg" class="img-fluid" alt="">
+                           <div class="social">
+                               <a href="" class="iconfont-twitter"></a>
+                               <a href="" class="iconfont-facebook"></a>
+                               <a href="" class="iconfont-linkedin"></a>
+                           </div>
+                       </div>
+                       <div class="member-info">
+                           <h4>Comr. </h4>
+                           <span> State Coordinator</span>
+                       </div>
+                   </div>
+               </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                   <div class="member" data-aos="fade-up" data-aos-delay="100">
+                      <div class="member-img">
+                         <img src="tlogo.jpeg" class="img-fluid" alt="">
+                         <div class="social">
+                            <a href="" class="iconfont-twitter"></a>
+                            <a href="" class="iconfont-facebook"></a>
+                            <a href="" class="iconfont-linkedin"></a>
+                           </div>
+                       </div>
+                       <div class="member-info">
+                           <h4>Comr. Inioluwa Elizabeth Ayelabola</h4>
+                           <span>Kwara State Coordinator</span>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                   <div class="member" data-aos="fade-up" data-aos-delay="100">
+                       <div class="member-img">
+                           <img src="tlogo.jpeg" class="img-fluid" alt="">
+                           <div class="social">
+                               <a href="" class="iconfont-twitter"></a>
+                               <a href="" class="iconfont-facebook"></a>
+                               <a href="" class="iconfont-linkedin"></a>
+                           </div>
+                       </div>
+                       <div class="member-info">
+                           <h4>Comr. </h4>
+                           <span> State Coordinator</span>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                  <div class="member" data-aos="fade-up" data-aos-delay="100">
+                      <div class="member-img">
+                           <img src="tlogo.jpeg" class="img-fluid" alt="">
+                           <div class="social">
+                               <a href="" class="iconfont-twitter"></a>
+                               <a href="" class="iconfont-facebook"></a>
+                               <a href="" class="iconfont-linkedin"></a>
+                           </div>
+                       </div>
+                       <div class="member-info">
+                           <h4>Comr. </h4>
+                           <span> State Coordinator</span>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                 <div class="member" data-aos="fade-up" data-aos-delay="100">
+                     <div class="member-img">
+                          <img src="tlogo.jpeg" class="img-fluid" alt="">
+                          <div class="social">
+                              <a href="" class="iconfont-twitter"></a>
+                              <a href="" class="iconfont-facebook"></a>
+                              <a href="" class="iconfont-linkedin"></a>
+                          </div>
+                      </div>
+                      <div class="member-info">
+                          <h4>Comr. </h4>
+                          <span> State Coordinator</span>
+                      </div>
+                  </div>
+              </div>
+           </div>
+        </div>
+    </section>
+    <div class="fluid-container">
+        <h2>Donation</h2>
+        <p class="note">You can donate to this movement by making a bank transfer to any of the bank accounts below. Simply enter the bank name and account number, then confirm the bank account name and transfer. <br> To confirm your donation, put a call to the treasurer on +23481000000000 </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <p class="name"><h5>Bank:</h5><img src="GTBank.jpg" width="20px" height="20px">GTB</p>
+                    <p class="name"><h5>Account Name:</h5> Coalition of Middle-Belt Youth Support</p>
+                    <p class="name"><h5>Account Number:</h5>90000000000</p>
+                    <hr>
+                </div>
+                <div class="col-lg-4">
+                    <p class="name"><h5>Bank:</h5><img src="Uba.png" width="30px" height="30px">UBA</p>
+                    <p class="name"><h5>Account Name:</h5> Coalition of Middle-Belt Youth Support</p>
+                    <p class="name"><h5>Account Number:</h5>90000000000</p>
+                    <hr>
+                </div>
+                <div class="col-lg-4">
+                    <p class="name"><h5>Bank:</h5><img src="first.jpg" width="50px" height="50px">FirstBank</p>
+                    <p class="name"><h5>Account Name:</h5> Coalition of Middle-Belt Youth Support</p>
+                    <p class="name"><h5>Account Number:</h5>90000000000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fluid-container1">
+       <img src="tlogo.jpeg" class="logo" width="50px" height="50px">
+        <h6>QUICK LINKS</h6>
+       <div class="container">
+            <div class="row">
+               <div class="col-lg-6">
+                  <a class="link" href="tinubu.html">Home</a><br>
+                  <a class="link" href="tinubu3.html">About Us</a><br>
+                  <a class="link" href="tinubu2.html">Executive</a>
+                </div>
+               <div class="col-lg-6">
+                   <a class="link" href="">Update</a><br>
+                   <a class="link" href="tinubu4.html">Donate</a><br>
+                   <a class="link" href="">Contact</a>
+                </div>
+            </div>
+        </div>
+        <h6>CONTACT</h6>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                   <a href=""><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                   <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a><br>
+                   <a href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                   <a href=""><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-lg-4">
+                   <i class="fa fa-phone" aria-hidden="true">  +2348067688357</i><br>
+                   <i class="fa fa-phone" aria-hidden="true">  +2348065073693</i>
+                </div>
+                <div class="col-lg-4">
+                  <i class="fa fa-envelope" aria-hidden="true"> coalition@gmail.com</i>
+                  <i class="fa fa-envelope" aria-hidden="true"> coalition@gmail.com</i>
+                  <i class="fa fa-envelope" aria-hidden="true"> coalition@gmail.com</i>
+                </div>
+                <br><p class="copy">&copy; 2022 coalitionofmiddlebelt.com</p>
+                <p class="copy1">Developed by DakieoDev <i class="fa fa-phone" aria-hidden="true">  +2348107265575</i></p>
+            </div>
+       </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</html>

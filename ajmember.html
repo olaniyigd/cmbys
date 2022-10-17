@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<style>
+  body{
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  a{
+        color:#e03a3e;
+    }
+    a:hover{
+        color:#e76668;
+        text-decoration: none;
+    }
+    .team .member{
+        margin-bottom:20px;
+        overflow:hidden;
+        border-radius:5px;
+        background:#fff;
+    }
+    .team .member .member-img{
+        position:relative;
+        overflow:hidden;
+    }
+    .team .member .social{
+        position:absolute;
+        left:0;
+        bottom:30px;
+        right:0;
+        opacity:0;
+        transition:ease-in-out 0.3s;
+        text-align:center;
+    }
+    .team .member:hover .social{
+        opacity:1;
+        bottom:15px;
+    }
+    .team .member .social a{
+        transition:color o.3s;
+        color:#111111;
+        margin:0 3px;
+        padding-top:7px;
+        border-radius:50px;
+        width:36px;
+        height:36px;
+        background:#e03a3c;
+        display:inline-block;
+        transition:ease-in-out 0.3s;
+        color:#fff;
+    }
+    .team .member .social a:hover{
+        background:#111111;
+    }
+    .team .member .social i{
+        font-size:18px;
+    }
+    .team .member .member-info{
+        padding:25px 15px; 
+    }
+    .team .member .member-info h4{
+        font-weight: 700;
+        margin-bottom:5px;
+        font-size:18px;
+        color:#111111;
+    }
+    .team .member .member-info span{
+        display:block;
+        font-size: 13px;
+        font-weight: 400;
+        color:#aaaa;
+    }
+    section{
+        padding:60px 0;
+        overflow:hidden;
+        position:relative;
+    }
+    .section-title{
+        text-align:center;
+        padding-bottom:30px;
+        position:relative;
+    }
+
+      /* Slideshow container */
+ .slideshow-container {
+  position: relative;
+  background: white;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+    .floating {
+ position: fixed;
+ width: 60px;
+ height: 60px;
+ bottom: 40px;
+ right: 40px;
+ background-color: #25d366;
+ color: #fff;
+ border-radius: 50px;
+ text-align: center;
+ font-size: 30px;
+ box-shadow: 2px 2px 3px #999;
+ z-index: 100;
+}
+
+.fab-icon {
+ margin-top: 16px;
+}
+
+</style>
+<body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#"><img src="tlogo.jpeg" class="rounded-circle" height="50" width="50"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+       <li class="nav-item">
+         <a class="nav-link text-light" href="aj.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="ajabout.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="ajmember.html">Member</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link text-light" href="ajdonate.html">Donate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="ajcontact.html">Contact</a>
+        </li>     
+      </ul>
+    </div>  
+  </nav>
+  <div class="container-fluid" style="background-image:url('background4.jpg'); height:300px;">
+    <div class="container">
+        <div class="container">
+            <p style="color:white; font-size:40px; padding-top:130px; font-family: Arial, Helvetica, sans-serif;">Member</p>
+             <p style="color:white; font-size:20px; font-family:Arial, Helvetica, sans-serif">A cross-section of the exemplary individuals at the helm of our affairs.</p>
+        </div>
+     </div>
+  </div>
+  <section id="team" class="team section-bg">
+    <div class="container" data-aos="fade">
+        <div class="section-title">
+            <h2>National Executives</h2>
+        </div>
+        <div class="row">
+           <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                <div class="member" data-aos="fade" data-aos-delay="100">
+                   <div class="member-img">
+                      <img src="bello.jpg" class="img-fluid" alt="">
+                      <div class="social">
+                         <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                         <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>His Excellency Yahaya Bello</h4>
+                        <span>Executive Governor of Kogi State</span>
+                        <span>Grand Patron</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+                <div class="member" data-aos="fade" data-aos-delay="100">
+                    <div class="member-img">
+                        <img src="pauline.webp" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                         <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>Her Excellency Pauline Kedem Tallen</h4>
+                        <span>Minister for Women affairs & Social Developement</span>
+                        <span>Grand Matron</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+               <div class="member" data-aos="fade" data-aos-delay="100">
+                  <div class="member-img">
+                     <img src="dayo.gif" class="img-fluid" alt="">
+                     <div class="social">
+                        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                         <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                       </div>
+                   </div>
+                   <div class="member-info">
+                       <h4>His Excellency Dayo Isreal</h4>
+                       <span>APC National Youth Leader</span>
+                   </div>
+               </div>
+           </div>
+           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+               <div class="member" data-aos="fade" data-aos-delay="100">
+                   <div class="member-img">
+                       <img src="ranga.jpeg" class="img-fluid" alt="">
+                       <div class="social">
+                        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                       </div>
+                   </div>
+                   <div class="member-info">
+                       <h4>Hon. Ishaya Ayuba Ranga</h4>
+                       <span>National Coordinator</span>
+                       <span>08067668357</span>
+                       <span>Kaduna State</span>
+                   </div>
+               </div>
+           </div>
+           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+             <div class="member" data-aos="fade" data-aos-delay="100">
+                 <div class="member-img">
+                     <img src="onize.jpeg" class="img-fluid" alt="">
+                     <div class="social">
+                        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                     </div>
+                 </div>
+                 <div class="member-info">
+                     <h4>Hon. Olajide Favour Onize</h4>
+                     <span>Deputy National Coordinator</span>
+                     <span>08100311591</span>
+                     <span>Kogi State</span>
+                 </div>
+             </div>
+         </div>
+       </div>
+       <div class="row">
+        <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+             <div class="member" data-aos="fade" data-aos-delay="100">
+                <div class="member-img">
+                   <img src="mniob.jpeg" class="img-fluid" alt="">
+                   <div class="social">
+                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                     </div>
+                 </div>
+                 <div class="member-info">
+                     <h4>Bldr. Sadiq Mahmood. mniob</h4>
+                     <span>National Secretary</span>
+                     <span>08065073693</span>
+                     <span>Nasarrwawa State</span>
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+             <div class="member" data-aos="fade" data-aos-delay="100">
+                 <div class="member-img">
+                     <img src="sadiku.jpeg" class="img-fluid" alt="">
+                     <div class="social">
+                        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                     </div>
+                 </div>
+                 <div class="member-info">
+                     <h4>Comr. Abdulazeez Sadiku</h4>
+                     <span>National Director Media & Publicity</span>
+                     <span>07064923332</span>
+                     <span>Niger State</span>
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+           <div class="member" data-aos="fade" data-aos-delay="100">
+               <div class="member-img">
+                   <img src="amasa.jpeg" class="img-fluid" alt="">
+                   <div class="social">
+                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                   </div>
+               </div>
+               <div class="member-info">
+                   <h4>Hon. Ayodeji Yusuf Amasa</h4>
+                   <span>Director Programs</span>
+                   <span>080000000</span>
+                   <span>Kwara State</span>
+               </div>
+           </div>
+       </div>
+       <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+        <div class="member" data-aos="fade" data-aos-delay="100">
+           <div class="member-img">
+              <img src="tlogo.jpeg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="member-info">
+                <h4>Hon. Ann Suwa</h4>
+                <span>National Treasurer</span>
+                <span>080000000</span>
+                <span>Plateau State</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+        <div class="member" data-aos="fade" data-aos-delay="100">
+            <div class="member-img">
+                <img src="bakari.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="member-info">
+                <h4>Hon. Saidu Bakari</h4>
+                <span>National Director Welfare</span>
+                <span>08036445551</span>
+                <span>Taraba State</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+      <div class="member" data-aos="fade" data-aos-delay="100">
+          <div class="member-img">
+              <img src="saidu.jpeg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+              </div>
+          </div>
+          <div class="member-info">
+              <h4>Hon. Halimatu sadiya saidu</h4>
+              <span>National Organizing Secretary</span>
+              <span>08096155668</span>
+              <span>F.C.T Abuja</span>
+          </div>
+      </div>
+  </div>
+     </div>
+     <div class="row">
+      <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+           <div class="member" data-aos="fade" data-aos-delay="100">
+              <div class="member-img">
+                 <img src="danjuma.jpeg" class="img-fluid" alt="">
+                 <div class="social">
+                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>     
+                   </div>
+               </div>
+               <div class="member-info">
+                   <h4>Barr Abubakar Sadiq Danjuma Esq</h4>
+                   <span>National Legal Adviser I</span>
+                   <span>080000000</span>
+                   <span>Niger State</span>
+               </div>
+           </div>
+       </div>
+       <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+           <div class="member" data-aos="fade" data-aos-delay="100">
+               <div class="member-img">
+                   <img src="aremu.jpeg" class="img-fluid" alt="">
+                   <div class="social">
+                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                   </div>
+               </div>
+               <div class="member-info">
+                   <h4>Mrs. Aremu Rahmat Ayodeji</h4>
+                   <span>National Director of Persones leaving with Disabilities</span>
+                   <span>08063147298</span>
+                   <span>Kwara State</span>
+               </div>
+           </div>
+       </div>
+       <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+         <div class="member" data-aos="fade" data-aos-delay="100">
+             <div class="member-img">
+                 <img src="umar.jpeg" class="img-fluid" alt="">
+                 <div class="social">
+                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                 </div>
+             </div>
+             <div class="member-info">
+                 <h4>Umar A Abdullahi</h4>
+                 <span>Financial Secretary</span>
+                 <span>080000000</span>
+                 <span>Nassarawa State</span>
+             </div>
+         </div>
+     </div>
+     <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+      <div class="member" data-aos="fade" data-aos-delay="100">
+         <div class="member-img">
+            <img src="amodu.jpeg" class="img-fluid" alt="">
+            <div class="social">
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+              </div>
+          </div>
+          <div class="member-info">
+              <h4>Hon. Amodu Edache Gideon</h4>
+              <span>National Youth Leader</span>
+              <span>08038453423</span>
+              <span>Benue State</span>
+          </div>
+      </div>
+  </div>
+  <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+      <div class="member" data-aos="fade" data-aos-delay="100">
+          <div class="member-img">
+              <img src="tlogo.jpeg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+              </div>
+          </div>
+          <div class="member-info">
+              <h4>Hon. Esther Pam Nwere</h4>
+              <span>National Women Leader</span>
+              <span>080000000</span>
+              <span>Plateau State</span>
+          </div>
+      </div>
+  </div>
+  <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+    <div class="member" data-aos="fade" data-aos-delay="100">
+        <div class="member-img">
+            <img src="habibat.jpeg" class="img-fluid" alt="">
+            <div class="social">
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>       
+            </div>
+        </div>
+        <div class="member-info">
+            <h4>Haj. Habibat S. Abdulrahaman</h4>
+            <span>National Deputy Director Media</span>
+            <span>080000000</span>
+            <span>Niger State</span>
+        </div>
+    </div>
+</div>
+   </div>
+   <div class="row">
+    <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+         <div class="member" data-aos="fade" data-aos-delay="100">
+            <div class="member-img">
+               <img src="ede.jpeg" class="img-fluid" alt="">
+               <div class="social">
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                 </div>
+             </div>
+             <div class="member-info">
+                 <h4>Ede Ojoko Francis Esq</h4>
+                 <span>National Legal Adviser II</span>
+                 <span>080000000</span>
+                 <span>Benue State</span>
+             </div>
+         </div>
+     </div>
+     <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+         <div class="member" data-aos="fade" data-aos-delay="100">
+             <div class="member-img">
+                 <img src="gaiya.jpeg" class="img-fluid" alt="">
+                 <div class="social">
+                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                 </div>
+             </div>
+             <div class="member-info">
+                 <h4>Com. Joseph Bege Gaiya</h4>
+                 <span>Assistant National Youth Leader</span>
+                 <span>07069364355</span>
+                 <span>Kaduna State</span>
+             </div>
+         </div>
+     </div>
+     <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+       <div class="member" data-aos="fade" data-aos-delay="100">
+           <div class="member-img">
+               <img src="saidat.jpeg" class="img-fluid" alt="">
+               <div class="social">
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+               </div>
+           </div>
+           <div class="member-info">
+               <h4>Com. Jimoh Saidat Oziohu</h4>
+               <span>Assistant National Woman Leader</span>
+               <span>07063442847</span>
+               <span>Kogi State</span>
+           </div>
+       </div>
+   </div>
+   <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+    <div class="member" data-aos="fade" data-aos-delay="100">
+       <div class="member-img">
+          <img src="tlogo.jpeg" class="img-fluid" alt="">
+          <div class="social">
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="member-info">
+            <h4>Hon. Ruth Felix</h4>
+            <span>National Assistant Secretary</span>
+            <span>080000000</span>
+            <span>F.C.T Abuja</span>
+        </div>
+    </div>
+</div>
+ </div>
+    </div>
+</section>
+
+    <section id="team" class="team section-bg">
+        <div class="container" data-aos="fade">
+            <div class="section-title">
+                <h2>STATE COORDINATORS</h2>
+            </div>
+            <div class="row">
+               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member" data-aos="fade" data-aos-delay="100">
+                       <div class="member-img">
+                          <img src="tinubu32.jpeg" class="img-fluid" alt="">
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>    
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Com. Inioluwa Elizabeth Ayelabola</h4>
+                            <span>Kwara State Coordinator</span>
+                            <span>08139402412</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member" data-aos="fade" data-aos-delay="100">
+                        <div class="member-img">
+                            <img src="safiya.jpeg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Com. Safiya Ishaq Abduljalil</h4>
+                            <span>Kaduna State Coordinator</span>
+                            <span>08068685222</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                   <div class="member" data-aos="fade" data-aos-delay="100">
+                       <div class="member-img">
+                            <img src="david.jpeg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                 <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Dr. Usman David</h4>
+                            <span>Benue State Coordinator</span>
+                            <span>07038461048</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                  <div class="member" data-aos="fade" data-aos-delay="100">
+                      <div class="member-img">
+                           <img src="victor.jpeg" class="img-fluid" alt="">
+                           <div class="social">
+                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>    
+                           </div>
+                       </div>
+                       <div class="member-info">
+                           <h4>Com. Nicholas Adeiza Victor</h4>
+                           <span>Kogi State Coordinator</span>
+                           <span>07037832582</span>
+                       </div>
+                   </div>
+               </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+                   <div class="member" data-aos="fade" data-aos-delay="100">
+                      <div class="member-img">
+                         <img src="tlogo.jpeg" class="img-fluid" alt="">
+                         <div class="social">
+                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                           </div>
+                       </div>
+                       <div class="member-info">
+                           <h4>Com.</h4>
+                           <span>Plateau State Coordinator</span>
+                           <span>080000000</span>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                   <div class="member" data-aos="fade" data-aos-delay="100">
+                       <div class="member-img">
+                           <img src="usman.jpeg" class="img-fluid" alt="">
+                           <div class="social">
+                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>    
+                           </div>
+                       </div>
+                       <div class="member-info">
+                           <h4>Hon. Usman Ja'afaru </h4>
+                           <span>Nasarawa State Coordinator</span>
+                           <span>08037994575</span>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                  <div class="member" data-aos="fade" data-aos-delay="100">
+                      <div class="member-img">
+                           <img src="tlogo.jpeg" class="img-fluid" alt="">
+                           <div class="social">
+                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>    
+                           </div>
+                       </div>
+                       <div class="member-info">
+                           <h4>Comr. </h4>
+                           <span>F.C.T Abuja Coordinator</span>
+                           <span>080000000</span>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+                 <div class="member" data-aos="fade" data-aos-delay="100">
+                     <div class="member-img">
+                          <img src="blessing.jpeg" class="img-fluid" alt="">
+                          <div class="social">
+                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>    
+                          </div>
+                      </div>
+                      <div class="member-info">
+                          <h4>Com.Blessing Ishaku</h4>
+                          <span>Taraba State Coordinator</span>
+                          <span>080000000</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-2 col-md-6 d-flex align-items-stretch">
+                <div class="member" data-aos="fade" data-aos-delay="100">
+                    <div class="member-img">
+                         <img src="tlogo.jpeg" class="img-fluid" alt="">
+                         <div class="social">
+                           <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                           <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>    
+                         </div>
+                     </div>
+                     <div class="member-info">
+                         <h4>Com.</h4>
+                         <span>Niger State Coordinator</span>
+                         <span>080000000</span>
+                     </div>
+                 </div>
+             </div>
+           </div>
+        </div>
+    </section>
+
+  <div class="container-fluid">
+    <div class="container" style="background-image:url('background4.jpg'); height:100px;align-content: center; margin-top:50px;">
+      <h5 style="color:white; text-align:center; padding-top:20px;">Follow Us</h5>
+      <p style="text-align:center">
+        <a style="color:#3b5998; margin-left:10px;" href="https://www.facebook.com/groups/838046363850240/?ref=share"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+        <a style="color:#00acee; margin-left:15px;" href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+        <a style="color:#C13584; margin-left:15px;" href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a><br>
+      </p>
+    </div>
+  </div>
+
+  <div class="slideshow-container">
+    <h4 style="text-align:center; margin-top:30px;">Testimonial</h4>
+    <div class="mySlides">
+        <img src="tlogo.jpeg" style="height:100px; width:100px; border-radius:50px;"><br><br>
+        <q>On your mandate i shall always stand Bola. Continue to build human sir.</q><br>
+        <p class="author">- Hon. Olajide Favour</p>
+      </div>
+    
+    <div class="mySlides">
+        <img src="tinubu32.jpeg" style="height:100px; width:100px; border-radius:50px;"><br><br>
+        <q>On your mandate i shall always stand Bola. Continue to build human sir.</q><br>
+        <p class="author">- Inioluwa Ayelabola</p>
+      </div>
+      
+    <div class="mySlides">
+      <img src="tinubu31.jpeg" style="height:100px; width:100px; border-radius:50px;"><br><br>
+      <q>On H.E Bola Ahamed Tinubu Mandate i shall stand.</q><br>
+      <p class="author">- Hon. Ishaya A. Ranga</p>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    <div class="container-fluid" style="background-color:rgb(29, 27, 27); margin-top:20px; height:auto;">
+      <div class="container" style="display:flex;">
+        <a class="navbar-brand" href="#"><img src="tlogo.jpeg" class="rounded-circle mt-2" height="50" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="apc.png" class="rounded-circle mt-2" height="50" width="50"></a>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <h6 style="color:white; margin-top:15px; text-decoration: underline;">Quick Links</h6>
+          <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:20px; margin-bottom:5px;" href="aj.html">Home</a><br>
+         <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:20px; margin-bottom:5px;" href="ajabout.html">About</a><br>
+        <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:20px; margin-bottom:5px;" href="ajmember.html">Member</a><br>
+        <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:20px; margin-bottom:5px;" href="ajdonate.html">Donate</a><br>
+       <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:20px; margin-bottom:5px;" href="ajcontact.html">Contact</a><br>
+        </div>
+        <div class="col-lg-3">
+          <h6 style="color:white; margin-top:15px; text-decoration: underline;">Zone</h6>
+          <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">F.C.T</a><br>
+          <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Benue</a><br>
+         <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Kaduna</a><br>
+        <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Kogi</a><br>
+       <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Kwara</a><br>
+       <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Nassarawa</a><br>
+       <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Niger</a><br>
+       <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Plateau</a><br>
+       <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Taraba</a>
+        </div>
+        <div class="col-lg-3">
+          <h6 style="color:white; margin-top:15px; text-decoration:underline;">Follow Us</h6>
+          <a style="color:#3b5998; margin-left:0px;" href="https://www.facebook.com/groups/838046363850240/?ref=share"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+          <a style="color:#00acee; margin-left:15px;" href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+          <a style="color:#C13584; margin-left:15px;" href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a><br>
+        </div>
+        <div class="col-lg-3">
+          <h6 style="color:white; margin-top:15px; text-decoration:underline;">Contact</h6>
+          <p style="color:white; font-family:san-serif; margin-top:0;">National Co-ordinator <i class="fa fa-phone" aria-hidden="true"> +2348067668357</i></p>             
+        </div>
+        <i style="color:white; margin-left:15px;" class="fa fa-envelope" aria-hidden="true"> coalitionofmiddlebeltyouth@gmail.com</i><br>
+      </div>
+      <i style="color:white;" class="fa fa-map-marker" aria-hidden="true"> 14th Road, Block 2018 Anan House First Avenue, Gwarinpa, F.C.T Abuja.</i>
+      <br><br>
+      <p style="color:white; font-family:san-serif; text-align:center;">coalitionofmiddlebeltyouth Copyright &copy;2022 All Rights Researved. </p>
+      <p style="color:white; font-family:san-serif; text-align:center;">Powered by: DakieoDev <i class="fa fa-phone" aria-hidden="true"> +2348107265575.</i></p><br>
+    </div>
+  <a href="https://wa.me/2347064923332?text=Hi%20Qiscus" class="floating" target="_blank">
+    <i class="fab fa-whatsapp fab-icon"></i>
+    </a>
+</body>
+<script src="aj.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</html>

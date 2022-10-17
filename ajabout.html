@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<style>
+  body{
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  /* Slideshow container */
+ .slideshow-container {
+  position: relative;
+  background: white;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+.floating {
+ position: fixed;
+ width: 60px;
+ height: 60px;
+ bottom: 40px;
+ right: 40px;
+ background-color: #25d366;
+ color: #fff;
+ border-radius: 50px;
+ text-align: center;
+ font-size: 30px;
+ box-shadow: 2px 2px 3px #999;
+ z-index: 100;
+}
+
+.fab-icon {
+ margin-top: 16px;
+}
+
+</style>
+<body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#"><img src="tlogo.jpeg" class="rounded-circle" height="50" width="50"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+       <li class="nav-item">
+         <a class="nav-link text-light" href="aj.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="ajabout.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="ajmember.html">Member</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link text-light" href="ajdonate.html">Donate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="ajcontact.html">Contact</a>
+        </li>     
+      </ul>
+    </div>  
+  </nav>
+  <div class="container-fluid">
+    <div class="container" style="margin-top:50px">
+      <h5 data-aos="fade" data-aos-duration="1100" style="color:rgb(169, 24, 24); text-align:center;"><i class="fa fa-info-circle" aria-hidden="true"></i> About</h5>
+      <p data-aos="fade" data-aos-duration="1200" style="font-size:15px; text-align:justify;">Coalition of Middle Belt Youth Support for Tinubu and Shettima is a political movement established to ensure that the APC Presidential candidate emerge winner in the General election. The movemnet covered the eight states in the region which are Kaduna, Kogi, Kwara, Plateau, Niger, Nassarawa, Benue and F.C.T Abuja.</p>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="container" style="margin-top:50px">
+      <h5 data-aos="fade" data-aos-duration="1100" style="color:rgb(169, 24, 24); text-align:center;"><i class="fa fa-bullseye" aria-hidden="true"></i> Mission</h5>
+      <p data-aos="fade" data-aos-duration="1200" style="font-size:15px; text-align:justify;">Our Mission Is To Ensure 100 Percent Winning For The APC Aspirant In All The Middle Belt States And Project The Values, Ideas, 
+        Leadership Skills And Personality Of Bola Ahmed Tinubu As The Most Efficient Leader Nigerians Need To Drive The Country From A Third To A First World Nation.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="container" style="margin-top:50px">
+      <h5 data-aos="fade" data-aos-duration="1100" style="color:rgb(169, 24, 24); text-align:center;"><i class="fa fa-eye" aria-hidden="true"></i> Vision</h5>
+      <p data-aos="fade" data-aos-duration="1200" style="font-size:15px; text-align:justify;">The Coalition Of Middle Belt Youth's Support For Tinubu Shettima 2023 (COMBYS4TS) Will 
+        Strive To Sensitize The Teeming Middle Belt Youth's On The Need For Full Participation In 2023 General Elections And Total Support For Tinubu Shettima And All APC Aspirant Across All The Nine (9) Middle Belt States Towards Ensuring The Emergence Of A True 
+        Democrat, His Excellency Sen. Bola Ahmed Come 2023.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="container" style="margin-top:50px">
+      <h5 data-aos="fade" data-aos-duration="1100" style="color:rgb(169, 24, 24); text-align:center;"><i class="fa fa-tasks" aria-hidden="true"></i> Aim and Objectives</h5>
+      <p data-aos="fade" data-aos-duration="1200" style="font-size:15px; text-align:justify;">Our Aims And Objectives Is To Mobilize The Grassroot And Establish Community Support Group By Encouraging The Youth's To Come Out In Mass In All Election Days, Cast Their Votes And Protect Their Votes Without Violence Across The Middle Belt States And To Also Take Over The Social Media Space For Sensitization Of The Teeming Middle Belt Youth's Towards Ensuring They Obtain Their PVC And Vote For All APC Aspirant In The 2023 General Elections.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="container" style="background-image:url('background4.jpg'); height:100px;align-content: center; margin-top:50px;">
+      <h5 style="color:white; text-align:center; padding-top:20px;">Follow Us</h5>
+      <p style="text-align:center">
+        <a style="color:#3b5998; margin-left:10px;" href="https://www.facebook.com/groups/838046363850240/?ref=share"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+        <a style="color:#00acee; margin-left:15px;" href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+        <a style="color:#C13584; margin-left:15px;" href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a><br>
+      </p>
+    </div>
+  </div>
+  <div class="slideshow-container">
+    <h4 style="text-align:center; margin-top:30px;">Testimonial</h4>
+    <div class="mySlides">
+        <img src="tinubu32.jpeg" style="height:100px; width:100px; border-radius:50px;"><br><br>
+        <q>On your mandate i shall always stand Bola. Continue to build human sir.</q><br>
+        <p class="author">- Inioluwa Ayelabola</p>
+      </div>
+   
+      <div class="mySlides">
+        <img src="tlogo.jpeg" style="height:100px; width:100px; border-radius:50px;"><br><br>
+        <q>On your mandate i shall always stand Bola. Continue to build human sir.</q><br>
+        <p class="author">- Hon. Olajide Favour</p>
+      </div>
+      
+    <div class="mySlides">
+      <img src="tinubu31.jpeg" style="height:100px; width:100px; border-radius:50px;"><br><br>
+      <q>On H.E Bola Ahamed Tinubu Mandate i shall stand.</q><br>
+      <p class="author">- Hon. Ishaya A. Ranga</p>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    <div class="container-fluid" style="background-color:rgb(29, 27, 27); margin-top:20px; height:auto;">
+      <div class="container" style="display:flex;">
+        <a class="navbar-brand" href="#"><img src="tlogo.jpeg" class="rounded-circle mt-2" height="50" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="apc.png" class="rounded-circle mt-2" height="50" width="50"></a>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <h6 style="color:white; margin-top:15px; text-decoration: underline;">Quick Links</h6>
+          <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:20px; margin-bottom:5px;" href="aj.html">Home</a><br>
+         <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:20px; margin-bottom:5px;" href="ajabout.html">About</a><br>
+        <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:20px; margin-bottom:5px;" href="ajmember.html">Member</a><br>
+        <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:20px; margin-bottom:5px;" href="ajdonate.html">Donate</a><br>
+       <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:20px; margin-bottom:5px;" href="ajcontact.html">Contact</a><br>
+        </div>
+        <div class="col-lg-3">
+          <h6 style="color:white; margin-top:15px; text-decoration: underline;">Zone</h6>
+          <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">F.C.T</a><br>
+          <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Benue</a><br>
+         <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Kaduna</a><br>
+        <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Kogi</a><br>
+       <a style="color:white; font-family:san-serif;text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Kwara</a><br>
+       <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Nassarawa</a><br>
+       <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Niger</a><br>
+       <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Plateau</a><br>
+       <a style="color:white;font-family:san-serif; text-decoration: none; margin-left:10px; margin-bottom:5px;" href="">Taraba</a>
+        </div>
+        <div class="col-lg-3">
+          <h6 style="color:white; margin-top:15px; text-decoration:underline;">Follow Us</h6>
+          <a style="color:#3b5998; margin-left:0px;" href="https://www.facebook.com/groups/838046363850240/?ref=share"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+          <a style="color:#00acee; margin-left:15px;" href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+          <a style="color:#C13584; margin-left:15px;" href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a><br>
+        </div>
+        <div class="col-lg-3">
+          <h6 style="color:white; margin-top:15px; text-decoration:underline;">Contact</h6>
+          <p style="color:white; font-family:san-serif; margin-top:0;">National Co-ordinator <i class="fa fa-phone" aria-hidden="true"> +2348067668357</i></p>             
+        </div>
+        <i style="color:white; margin-left:15px;" class="fa fa-envelope" aria-hidden="true"> coalitionofmiddlebeltyouth@gmail.com</i><br>
+      </div>
+      <i style="color:white;" class="fa fa-map-marker" aria-hidden="true"> 14th Road, Block 2018 Anan House First Avenue, Gwarinpa, F.C.T Abuja.</i>
+      <br><br>
+      <p style="color:white; font-family:san-serif; text-align:center;">coalitionofmiddlebeltyouth Copyright &copy;2022 All Rights Researved. </p>
+      <p style="color:white; font-family:san-serif; text-align:center;">Powered by: DakieoDev <i class="fa fa-phone" aria-hidden="true"> +2348107265575.</i></p><br>
+    </div>
+  <a href="https://wa.me/2347064923332?text=Hi%20Qiscus" class="floating" target="_blank">
+    <i class="fab fa-whatsapp fab-icon"></i>
+    </a>
+</body>
+<script src="aj.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</html>

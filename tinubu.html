@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <title>Tinubu</title>
+</head>
+<style>
+    header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+header .logo{
+    color:black;
+    font-weight: bolder;
+    font-size: 35px;
+    text-decoration: none;
+}
+header .navbar ul{
+    list-style: none;
+    text-decoration: none;
+}
+header .navbar ul li{
+    position:relative;
+    float:left;
+}
+header .navbar ul li a{
+    color:black;
+    font-size: 12px;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+}
+header .navbar ul li a:hover{
+    color:black;
+    background-color: white;
+    transition: .8s;
+    border-radius:25px;
+}
+header .navbar ul li ul{
+    position:absolute;
+    left:0;
+    width:200px;
+    background:white;
+    display:none;
+}
+header .navbar ul li ul li{
+    width:100%;
+    border-top:1px solid rgba(0,0,0,.1);
+}
+header .navbar ul li ul li ul{
+    left:200px;
+    top:0;
+}
+header .navbar ul li:hover > ul{
+    display:initial;
+}
+#menu-bar{
+    display:none;
+}
+header label{
+    font-size: 20px;
+    color:black;
+    cursor: pointer;
+    display:none;
+}
+@media(max-width:991px){
+    header{
+        padding:10px;
+    }
+    header label{
+        display:initial;
+    }
+    header .navbar{
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        background-color: white;
+        border-top: 1px solid rgba(0,0,0,.1);
+        display:none;
+    }
+    header .navbar ul li{
+        width:80%;
+    }
+    header .navbar ul li ul{
+        position:relative;
+        width:100%;
+    }
+    header .navbar ul li ul li{
+        background:white;
+    }
+    header .navbar ul li ul li ul{
+        width:100%;
+        left:0;  
+    }
+    #menu-bar:checked ~ .navbar{
+        display:initial;
+    }
+    .container2 img{
+        margin-top: 0px;
+    }
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin-top:10%;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+  max-width:100%;
+}
+/* Caption text */
+.text {
+  color: rgb(168, 12, 12);
+  font-family: sans-serif;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 1px greenyellow;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: white;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 9s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.grid-container {
+  display: grid;
+  gap: 5px;
+  background-color: whitesmoke;
+  padding: 10px;
+}
+h5{
+  color:rgb(168, 12, 12);
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+.info{
+  max-width: 100%;
+  font-family:sans-serif;
+}
+h2{
+  font-family:sans-serif;
+  background-color:rgb(168, 12, 12);;
+  color:white;
+  text-align:center;
+}
+.fluid-container{
+  background-color: white;
+  margin-top:20px;
+}
+
+.container1{
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+    background-color: white;
+    width:100%;
+    height:50px;
+    margin-bottom: 50px;
+}
+.countdown{
+    display:flex;
+    justify-content:space-between;
+    margin-right:10px;
+    margin-left:10px;    
+}
+.day, .hour, .minute, .second{
+    font-size: 15px;
+    color:black;
+    font-family: sans-serif;
+    margin-top: 0;
+}
+.h31{
+    font-size: 15px;
+    color:black;
+    font-family: monospace;
+    margin-bottom: 0;
+}
+.h21{
+    color:black;
+    background-color: white;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+#blog{
+       display:flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       padding:40px; 
+}
+    .blog-heading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .blog-heading span{
+        color:#f33c3c;
+    }
+    .blog-heading h3{
+        font-size:2.4rem;
+        color:#2b2b2b;
+        font-weight: 600;
+    }
+    .blog-container{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin:20px opx;
+        flex-wrap:wrap;
+    }
+    .blog-box{
+        width:350px;
+        background-color: #ffff;
+        border:1px solid #ececec;
+        margin:20px;
+    }
+    .blog-img{
+        width:100%;
+        height:auto;
+    }
+    .blog-img img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position: center;
+    }
+    .blog-text{
+        padding:30px;
+        display:flex;
+        flex-direction: column;
+    }
+    .blog-text span{
+        color:#f33c3c;
+        font-size: 0.9rem;
+    }
+    .blog-text .blog-title{
+        font-size: 1.3rem;
+        font-weight: 500;
+        color:#272727;
+    }
+    .blog-text .blog-title:hover{
+        color:#f33c3c;
+        transition:all ease 0.3s;
+    }
+    .blog-text .update{
+        color:#9b9b9b;
+        font-size: 0.9rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        margin:20px 0px;
+    }
+    .blog-text .read{
+        color:white;
+        background-image: url("tinubu18.jpeg");
+        width:100px;
+        text-align: center;
+        border-top-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    .blog-text .read:hover{
+        color:#f33c3c;
+        transition:all ease 0.3s;
+    }
+    @media(max-width:1250px){
+        .blog-box{
+            width:300px;
+        }
+    }
+    @media(max-width:1100px){
+      .blog-box{
+            width:70%;
+        }
+    }
+    @media(max-width:550px){
+      .blog-box{
+        margin:20px 10px;
+            width:100%;
+        }
+        #blog{
+          padding:20px;
+        }
+    }
+.note{
+  color: black;
+  text-align: justify;
+  margin-left:15px;
+  margin-right:15px;
+}
+.gtb{
+  border-color: black;
+}
+.fluid-container1{
+  background-color:whitesmoke;
+}
+h6{
+  color:black;
+  margin-top:20px;
+  margin-left:20px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
+.logo{
+  margin-top:20px;
+  margin-left:20px;
+  border-radius:50px;
+}
+.link{
+  color:black;
+  margin-left:10px;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+.social{
+  color:black;
+  text-align: center;
+  font-family: sans-serif;
+  padding-top: 20px;
+}
+.container9{
+  display:inline;
+}
+.fa{
+  color: black;
+  margin-left:10px;
+}
+.copy{
+  margin-top:10px;
+  color:black;
+  text-align:center;
+}
+.copy1{
+  color:black;
+  text-align:center;
+}
+.responsivess{
+  width:70px;
+  height:70px;
+  border-radius:50px;
+  margin-left:20px;
+}
+</style>
+<body>
+  <div class="container">
+    <header>
+        <img src="tlogo.jpeg" class="responsivess">
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">Menu</label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About+</a></li>
+                <li><a href="">Achievements</a></li>
+                <li><a href="">Update</a></li>
+                <li><a href="">Contact +</a></li>
+                <li><a href="">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+       <img src="tinubu11.jpeg" style="width:100%">
+      <div class="text">Today is the Unveiling and Inauguration of Coalition of Middle-Belt Youth Support for TINUBU and SHETTIMA PRESIDENCY</div>
+   </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+       <img src="tinubu7.jpeg" style="width:100%">
+      <div class="text">Today is the Unveiling and Inauguration of Coalition of Middle-Belt Youth Support for TINUBU and SHETTIMA PRESIDENCY</div>
+   </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+       <img src="tinubu17.jpeg" style="width:100%">
+     <div class="text">Today is the Unveiling and Inauguration of Coalition of Middle-Belt Youth Support for TINUBU and SHETTIMA PRESIDENCY</div>
+   </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+       <img src="tinubu26.jpeg" style="width:100%">
+     <div class="text">Today is the Unveiling and Inauguration of Coalition of Middle-Belt Youth Support for TINUBU and SHETTIMA PRESIDENCY</div>
+    </div>
+  </div>
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span>
+    <span class="dot"></span> 
+  </div>
+  <div class="fluid-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h5 data-aos="fade-left" data-aos-duration="900">About Us</h5>
+          <p data-aos="fade" data-aos-duration="800" data-aos-delay="400" class="info">Coalition of middle-belt youth support is a political movement established in 2022 in order to accomplish the presidency of Tinubu and Shettima.</p>
+          <hr>
+        </div>
+        <div class="col-lg-6">
+          <h5 data-aos="fade-right" data-aos-duration="900">Mission</h5>
+          <p data-aos="fade" data-aos-duration="800" data-aos-delay="400" class="info">Coalition of middle-belt youth support is a political movement established in 2022 in order to accomplish the presidency of Tinubu and Shettima </p>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fluid-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h5 data-aos="fade-right" data-aos-duration="1000">Vision</h5>
+          <p data-aos="fade" data-aos-duration="800" data-aos-delay="600" class="info">Coalition of middle-belt youth support is a political movement established in 2022 in order to accomplish the presidency of Tinubu and Shettima.</p>
+          <hr>
+        </div>
+        <div class="col-lg-6">
+          <h5 data-aos="fade-right" data-aos-duration="1000">Objective</h5>
+          <p data-aos="fade" data-aos-duration="800" data-aos-delay="600" class="info">This great movement have the following objectives or focal point which are:<br> 
+            1) To sensitize the Middle Belt Youths on the need for full participation in 2023 General 
+            Elections and total support for Tinubu and Shettima.<br>
+            2) To mobilize Youths to obtain their PVC.<br>
+            3) To team up with other youth groups and organization for total support for Tinubu and 
+            Shettima.<br>
+            4) To install a deliverer of Middle Belt votes to Tinubu and Shettima as Nigeria President and 
+            Vice President in 2023 General Election.<br>
+            5) To encourage the Youths to come out in mass in all election days, cast their votes and protect 
+            their votes without violence across the Middle Belt.<br>
+            6) To canvass for 10 million votes across the Middle Belt States for Tinubu and Shettima.
+            7) To ensure 100 percent winning in all the Middle Belt States.<br>
+            8) To take over the social media space for sensitization of the teaming youths.<br>
+            9) To mobilize the grassroots and establish community support group for Tinubu and Shettima.<br>
+            This great movement choose to support Asiwaju Bola Ahmed Tinubu because:<br>
+            He is a unique politician among politicians in Nigerian politics who believe in one Nigeria </p>
+            <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fluid-container">
+    <h2 data-aos="fade-down" data-aos-duration="1200">Latest Update</h2>
+    <section class="container1">
+      <div>
+        <h2 data-aos="fade-left" data-aos-duration="800" data-aos-delay="700" class="h21">2023 GENERAL COUNTDOWN</h2>
+        <div class="countdown">
+          <div class="container-day">
+            <h3 class="day">Time</h3>
+            <h3 class="h31">Day</h3>
+          </div>
+          <div class="container-hour">
+            <h3 class="hour">Time</h3>
+            <h3 class="h31">Hour</h3>
+          </div>
+          <div class="container-minute">
+            <h3 class="minute">Time</h3>
+            <h3 class="h31">Minute</h3>
+          </div>
+          <div class="container-second">
+            <h3 class="second">Time</h3>
+            <h3 class="h31">Second</h3>
+          </div>
+      </div>
+    </section>
+
+    <div class="container-fluid">
+      <div class="container">
+        <div class="container" style="background-image: url('background6.jpg');height:150px;">
+          <h6 data-aos="fade" data-aos-duration="1100" style="color:white; padding-top:100px;  font-family:Arial, Helvetica, sans-serif">Benue State Chapter</h6>
+        </div>
+        <a href=""><button class="btn1">Read More</button></a>
+      </div> 
+    </div> 
+    <div class="container1" style="background-image: url('background.jpg'); height:150px; text-align:center; margin-top:40px;">
+      <h4 data-aos="fade" data-aos-duration="1100" style="color:white; padding-top:40px; font-family:Arial, Helvetica, sans-serif">F.C.T Chapter</h4>
+      <a href="ajirepodun.html"><button class="btn1">Read More</button></a>
+    </div>
+    <div class="container1" style="background-image: url('background.jpg'); height:150px; text-align:center; margin-top:40px;">
+      <h4 data-aos="fade" data-aos-duration="1100" style="color:white; padding-top:40px; font-family:Arial, Helvetica, sans-serif">Kaduna State Chapter</h4>
+      <a href="ajisin.html"><button class="btn1">Read More</button></a>
+    </div> 
+    <div class="container1" style="background-image: url('background.jpg'); height:150px; text-align:center; margin-top:40px;">
+      <h4 data-aos="fade" data-aos-duration="1100" style="color:white; padding-top:40px; font-family:Arial, Helvetica, sans-serif">Kogi State Chapter</h4>
+      <a href="ajoke.html"><button class="btn1">Read More</button></a>
+    </div>
+    <div class="container1" style="background-image: url('background.jpg'); height:150px; text-align:center; margin-top:40px;">
+      <h4 data-aos="fade" data-aos-duration="1100" style="color:white; padding-top:40px; font-family:Arial, Helvetica, sans-serif">Kogi State Chapter</h4>
+      <a href="ajoke.html"><button class="btn1">Read More</button></a>
+    </div>
+    <div class="container1" style="background-image: url('background.jpg'); height:150px; text-align:center; margin-top:40px;">
+      <h4 data-aos="fade" data-aos-duration="1100" style="color:white; padding-top:40px; font-family:Arial, Helvetica, sans-serif">Kogi State Chapter</h4>
+      <a href="ajoke.html"><button class="btn1">Read More</button></a>
+    </div>
+
+    <section id="blog">
+      <div class="blog-heading">
+          <span></span>
+          <h3>My Blog</h3>
+      </div>
+      <div class="blog-container">
+          <div class="blog-box">
+              <div class="blog-img">
+                  <img src="unveil.jpeg" alt="blog">
+              </div>
+              <div class="blog-text">
+                  <span>08 Oct 2022 / Sat</span>
+                  <a href="" class="blog-title">Unveiling and Inauguration of Coalition of Middle-Belt Youth Support 4 Tinubu and Shettima</a>
+                  <p class="update">Tinubu says Bello s impressive political achievements and the exemplary leadership he had demonstrated as governor of his state and as a party member...</p>
+                  <a href="" class="read">Read More</a>
+              </div>
+          </div>
+
+          <div class="blog-box">
+              <div class="blog-img">
+                  <img src="tinubu26.jpeg" alt="blog">
+              </div>
+              <div class="blog-text">
+                  <span>18 Sept 2022 / Sun</span>
+                  <a href="" class="blog-title">Tinubu appoints Yahaya Bello as his campaign council youth co-ordinator</a>
+                  <p class="update">Tinubu says Bello deserves the appointment owing to his impressive political achievements and the exemplary leadership he had demonstrated as governor of his state and as a party member...</p>
+                  <a href="" class="read">Read More</a>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <div class="fluid-container">
+    <h2>Donation</h2>
+    <p class="note">You can donate to this movement by making a bank transfer to any of the bank accounts below. Simply enter the bank name and account number, then confirm the bank account name and transfer. <br> To confirm your donation, put a call to the treasurer on +23481000000000 </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <p class="name"><h5>Bank:</h5><img src="GTBank.jpg" width="20px" height="20px">GTB</p>
+          <p class="name"><h5>Account Name:</h5> Coalition of Middle-Belt Youth Support</p>
+          <p class="name"><h5>Account Number:</h5>90000000000</p>
+          <hr>
+        </div>
+        <div class="col-lg-4">
+          <p class="name"><h5>Bank:</h5><img src="Uba.png" width="30px" height="30px">UBA</p>
+          <p class="name"><h5>Account Name:</h5> Coalition of Middle-Belt Youth Support</p>
+          <p class="name"><h5>Account Number:</h5>90000000000</p>
+          <hr>
+        </div>
+        <div class="col-lg-4">
+          <p class="name"><h5>Bank:</h5><img src="first.jpg" width="50px" height="50px">FirstBank</p>
+          <p class="name"><h5>Account Name:</h5> Coalition of Middle-Belt Youth Support</p>
+          <p class="name"><h5>Account Number:</h5>90000000000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fluid-container1">
+    <img src="tlogo.jpeg" class="logo" width="50px" height="50px">
+    <h6>QUICK LINKS</h6>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <a class="link" href="tinubu.html">Home</a><br>
+          <a class="link" href="tinubu3.html">About Us</a><br>
+          <a class="link" href="tinubu2.html">Executive</a>
+        </div>
+        <div class="col-lg-6">
+          <a class="link" href="">Update</a><br>
+          <a class="link" href="tinubu4.html">Donate</a><br>
+          <a class="link" href="">Contact</a>
+        </div>
+      </div>
+    </div>
+    <h6>CONTACT</h6>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <a href=""><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a><br>
+          <a href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
+        </div>
+        <div class="col-lg-4">
+          <i class="fa fa-phone" aria-hidden="true">  +2348067688357</i><br>
+          <i class="fa fa-phone" aria-hidden="true">  +2348065073693</i>
+        </div>
+        <div class="col-lg-4">
+          <i class="fa fa-envelope" aria-hidden="true"> coalition@gmail.com</i>
+          <i class="fa fa-envelope" aria-hidden="true"> coalition@gmail.com</i>
+          <i class="fa fa-envelope" aria-hidden="true"> coalition@gmail.com</i>
+        </div>
+        
+        <br><p class="copy">&copy; 2022 coalitionofmiddlebelt.com</p>
+        <p class="copy1">Developed by DakieoDev <i class="fa fa-phone" aria-hidden="true">  +2348107265575</i></p>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="tinubu.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</html>
